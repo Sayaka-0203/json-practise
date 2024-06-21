@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded',function(){
     const productTable = document.getElementById('productTable');
     for(let i = 0;i < products.length; i++){
       const product = products[i];
-      const Tr = document.createElement('tr');
-            Tr.textContent = [`${product.id}`,`${product.name}`,`${product.price}`,`${product.description}`] ;
-            productTable.appendChild(Tr);
-    }
+        const td = document.createElement('td');
+        td.textContent = `${product.id},${product.name},${product.price},${product.description}`;
+        productTable.appendChild(td);
+    };
   })
   .catch(error => console.error('エラー:', error));
 });
